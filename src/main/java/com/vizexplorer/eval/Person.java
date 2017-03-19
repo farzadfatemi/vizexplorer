@@ -33,25 +33,24 @@ import java.util.UUID;
 /**
  *
  */
-public class Person
+public final class Person
 {
-  private String id;
-  private String name;
-  private String gender;
-  private Date birthDate;
+  private final String id;
+  private final String name;
+  private final String gender;
+  private final Date birthDate;
 
   /**
-   * 
-   * @param name
+   *  @param name
    * @param gender
    * @param birthDate
    */
   public Person(String name, String gender, Date birthDate)
   {
+    this.name = name;
+    this.gender = gender;
+    this.birthDate = birthDate;
     id = (UUID.randomUUID().toString());
-    setName(name);
-    setGender(gender);
-    setBirthDate(birthDate);
   }
 
   public String getId()
@@ -62,26 +61,26 @@ public class Person
   {
     return name;
   }
-  public void setName(String name)
-  {
-    this.name = name;
-  }
+//  public void setName(String name)
+//  {
+//    this.name = name;
+//  }
   public String getGender()
   {
     return gender;
   }
-  public void setGender(String gender)
-  {
-    this.gender = gender;
-  }
+//  public void setGender(String gender)
+//  {
+//    this.gender = gender;
+//  }
   public Date getBirthDate()
   {
-    return birthDate;
+    return birthDate !=null?new Date(birthDate.getTime()):null;
   }
-  public void setBirthDate(Date birthDate)
-  {
-    this.birthDate = birthDate;
-  }
+//  public void setBirthDate(Date birthDate)
+//  {
+//    this.birthDate = birthDate;
+//  }
 
   public Person clone()
   {

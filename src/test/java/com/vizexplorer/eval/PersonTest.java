@@ -80,16 +80,19 @@ public class PersonTest
   @Test
   public void testUpdate()
   {
+    /*
+    Due to making immutable Person the Setter methods should be ignored
+         */
     Person p1 = new Person("Update", "Male", null);
     assertEquals(null, p1.getBirthDate());
     Date bd = new GregorianCalendar(1967, Calendar.JULY, 1).getTime();
-    p1.setBirthDate(bd);
+//    p1.setBirthDate(bd);
     assertEquals(bd, p1.getBirthDate());
 
-    p1.setName("newname");
+//    p1.setName("newname");
     assertEquals("newname", p1.getName());
 
-    p1.setGender("Female");
+//    p1.setGender("Female");
     assertEquals("Female", p1.getGender());
   }
 }
