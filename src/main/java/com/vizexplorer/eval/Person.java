@@ -87,4 +87,13 @@ public class Person
   {
     return new Person(name, gender, birthDate);
   }
+
+  @Override
+  public String toString() {
+    return "com.vizexplorer.eval.Person@{" +
+            "name='" + name + '\'' +
+            ", gender='" + gender + '\'' +
+            ", birthDate=" + birthDate +
+            '}';
+  }
 }
