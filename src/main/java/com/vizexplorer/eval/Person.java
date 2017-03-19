@@ -51,7 +51,7 @@ public class Person
     id = (UUID.randomUUID().toString());
     setName(name);
     setGender(gender);
-    setBirthDate(birthDate);
+    setBirthDate(birthDate !=null?new Date(birthDate.getTime()):null);
   }
 
   public String getId()

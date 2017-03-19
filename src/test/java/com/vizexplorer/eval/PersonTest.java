@@ -69,12 +69,14 @@ public class PersonTest
     String id1 = p1.getId();
     
     Person p2 = p1.clone();
+    p2.setBirthDate(new GregorianCalendar(1981, Calendar.APRIL, 9).getTime());
 
     assertFalse(id1.equals(p2.getId()));
     assertFalse(p1.equals(p2));
     assertEquals(p1.getName(), p2.getName());
     assertEquals(p1.getGender(), p2.getGender());
-    assertEquals(p1.getBirthDate(), p2.getBirthDate());
+//    assertEquals(p1.getBirthDate(), p2.getBirthDate());
+    assertFalse(p1.getBirthDate().equals(p2.getBirthDate()));
   }
 
   @Test
