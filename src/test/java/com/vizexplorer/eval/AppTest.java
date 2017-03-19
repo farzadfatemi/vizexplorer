@@ -1,19 +1,19 @@
 package com.vizexplorer.eval;
 
-import static org.junit.Assert.assertTrue;
+import org.junit.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.text.ParseException;
 
-import org.junit.Test;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest
 {
-  @Test(expected=ParseException.class)
+  @Test
   public void testMain() throws ParseException
   {
     ByteArrayOutputStream outContent = new ByteArrayOutputStream();
