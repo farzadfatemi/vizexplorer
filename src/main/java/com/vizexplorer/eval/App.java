@@ -44,7 +44,6 @@ public class App {
             }
         } catch (Exception ex) {
             System.out.println("Input Date was incorrect: " + args[3]);
-//        ex.printStackTrace();
         }
     }
 }
